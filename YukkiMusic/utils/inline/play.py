@@ -46,8 +46,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
             ),
             InlineKeyboardButton(
                 text=_["PL_B_3"],
-                callback_data=f"{played} {bar} {dur}",
-                switch_inline_query_current_chat=",
+                callback_data=f"PanelMarkup {videoid}|{chat_id}",
             )
         ],
     ]
@@ -69,8 +68,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
             ),
             InlineKeyboardButton(
                 text=_["PL_B_3"],
-                callback_data=f"{played} {bar} {dur}",
-                switch_inline_query_current_chat=",
+                callback_data=f"PanelMarkup {videoid}|{chat_id}",
             )
         ],
     ]
